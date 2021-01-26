@@ -3,9 +3,9 @@ const mysql = require("mysql");
 // process.env로 시작하는 모든 변수들은 환경 변수(environmental variables)입니다.
 // 환경 변수는 터미널에서 다음 명령을 이용하여 설정할 수 있습니다.
 // export DATABASE_SPRINT_PASSWORD=your_password_here
-const password = process.env.DATABASE_SPRINT_PASSWORD;
+const password = 'qqww8741';
 
-const host = "localhost";
+const host = "practice.cxcy2fjeeudu.ap-northeast-2.rds.amazonaws.com";
 
 // 데이터베이스 연결을 만들고, 연결 객체를 export 하세요.
 // 연결에 필요한 몇가지 정보가 있습니다. 먼저 user는 root, 패스워드는 위 password 변수를 사용하세요.
@@ -16,7 +16,7 @@ let connection = mysql.createConnection({
   host,
   user: "root",
   password,
-  database: "chat"
+  database: "test"
 });
 
 connection.connect();
