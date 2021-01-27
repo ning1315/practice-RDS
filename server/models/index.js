@@ -15,7 +15,7 @@ module.exports = {
     post: function(params, callback) {
       // create a message for a user id based on the given username
       var queryStr = `insert into messages(text, userid, roomname)
-                      value (?, (select id from users where username = ? limit 1), ?)`;
+                      value (?, ?, ?)`;
       db.query(queryStr, params, function(err, results) {
         callback(err, results);
       });
